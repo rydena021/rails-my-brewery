@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h3>Where to find a good <%= @style.name %></h3>
+      <hr>
+      <ul>
+        <% @style.breweries.each do |brewery| %>
+          <li><%= link_to brewery.name, brewery_path(brewery) %></li>
+          <br>
+        <% end %>
+      </ul>
+      <%= link_to 'Back', breweries_path %>
+    </div>
+  </div>
+</div>

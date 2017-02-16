@@ -2,6 +2,24 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <h1><%= @brewery.name %></h1>
+
+      <% @brewery.beers.each do |beer| %>
+        <h3><%= beer.name %></h3>
+        <ul>
+            <li>Style: <%= link_to beer.style.name, style_path(beer.style) %></li>
+            <li>Description: <%= beer.description %></li>
+            <%= link_to "Delete", brewery_beer_path(@brewery, beer), method: "delete" %>
+        </ul>
+        <hr>
+      <% end %>
+
+      <%= simple_form_for [@brewery, @beer] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :style_id, collection: Style.all, prompt: "Select Style" %>
+        <%= f.button :submit, "Add Beer", class: "btn btn-primary"  %>
+      <% end %>
+      <br>
       <%= link_to 'Back', breweries_path %>
     </div>
   </div>
