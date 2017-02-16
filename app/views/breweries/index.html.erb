@@ -1,0 +1,27 @@
+<h1 class="text-center">Your brewery list</h1>
+
+<div class="text-center padded">
+  <%= link_to "Add a brewery", new_brewery_path, class: "btn btn-primary" %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @breweries.each do |brewery| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card text-center">
+
+          <% if brewery.picture %>
+            <div class="card-header" style="background-image: url('https://pbs.twimg.com/profile_images/594689468646305792/I0YswTOY.jpg')">
+            </div>
+          <% else %>
+            <div class="card-header" style="background-image: url('http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg')">
+            </div>
+          <% end %>
+          <div class="card-body">
+            <%= link_to brewery.name, brewery_path(brewery) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
