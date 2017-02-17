@@ -8,9 +8,7 @@
   <div class="row">
     <% @breweries.each do |brewery| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card text-center" style="background-image: url(<%= brewery.picture %>)">
-          <div class="card-header">
-            </div>
+        <div class="card text-center">
           <div class="card-body">
             <%= link_to brewery.name, brewery_path(brewery) %>
           </div>
