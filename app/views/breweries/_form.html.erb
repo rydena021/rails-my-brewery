@@ -1,6 +1,8 @@
 <%= simple_form_for(@brewery) do |f| %>
-  <%= f.input :name, placeholder: "New Brewery" %>
+  <%= f.input :name %>
+  <%= f.input :location %>
   <%= f.input :photo, as: :attachinary %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <hr>
+  <%= f.button :submit, class: "btn btn-primary btn-lg" %>
 <% end %>
 

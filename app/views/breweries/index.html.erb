@@ -1,22 +1,27 @@
-<h1 class="text-center">Brewery List</h1>
-
-<div class="text-center padded">
-  <%= link_to "Add a brewery", new_brewery_path, class: "btn btn-primary" %>
-</div>
+<%= render 'banner' %>
+<h2 class="text-center banner-show">Brewery List</h2>
 
 
 <div class="container">
   <div class="row">
     <% @breweries.each do |brewery| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card text-center">
-          <div class="card-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path brewery.photo.path, height: 200, width: 200, crop: :fill %>')">
+        <div class="card">
+          <div class="card-location"><%= brewery.location %>
           </div>
-          <div class="card-body">
-            <%= link_to brewery.name, brewery_path(brewery) %>
+          <div class="card-name"><%= brewery.name %>
           </div>
+          <%= cl_image_tag(brewery.photo.path, :class => "card-logo avatar")%>
+          <a class="card-link" href="<%= brewery_path(brewery) %>"></a>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+
+<div class="text-center padded">
+  <%= link_to "Add a brewery", new_brewery_path, class: "btn btn-primary" %>
+</div>
+
+<%= render 'footer' %>

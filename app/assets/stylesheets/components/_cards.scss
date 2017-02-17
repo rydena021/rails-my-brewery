@@ -1,30 +1,39 @@
+
 .card {
-  background: white;
-  margin-bottom: 10px;
+  height: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background: $flat-blue;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
-.card-header {
-  height: 200px;
-  width: 200px;
-  background-size: cover !important;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.card-logo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
-
-.card-body {
-  padding: 30px;
+.card-location {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 25px;
 }
-
+.card-name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 38px;
+}
 .card-link {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
   width: 100%;
   z-index:2;
   background: black;
   opacity: 0;
 }
 .card-link:hover{
-  opacity: 0.1;
+  opacity: 0.5;
 }

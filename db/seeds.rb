@@ -4,38 +4,32 @@ Style.destroy_all
 breweries = [
   {
     name: "Bent Paddle",
-    description: "",
-    location: "",
-    url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487329033/acqbuqy5f3jd9r7vcth5.png"
+    location: "Duluth, MN",
+    url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487372300/Bent-Paddle-Logo-for-Blog_wajkqh.jpg"
     },
   {
     name: "Surly",
-    description: "",
-    location: "",
+    location: "Minneapolis, MN",
     url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487341064/kbuui5seeslvrad98ebp.png"
     },
   {
     name: "Castle Danger",
-    description: "",
-    location: "",
+    location: "Two Harbors, MN",
     url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487326500/castle_danger_logo_ooevh7.png"
     },
   {
-    name: "3 Floyds",
-    description: "",
-    location: "",
-    url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487341310/egmp5e1k4n6v1nv75b0b.png"
+    name: "Lagunitas",
+    location: "Petaluma, CA",
+    url: "https://res.cloudinary.com/ders-cloud/image/upload/v1487372304/3577508.lagunitaslogo_ugqw9a.jpg"
     },
   {
     name: "Tin Whiskers",
-    description: "",
-    location: "",
+    location: "St. Paul, MN",
     url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487342161/mza0dfa1gat6qoll2na3.png"
     },
   {
     name: "Summit",
-    description: "",
-    location: "",
+    location: "St. Paul, MN",
     url: "https://res.cloudinary.com/ders-cloud/image/upload/v1487347258/summit_logo_yamb2k.png"
     }
 ]
