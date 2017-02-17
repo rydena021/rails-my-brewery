@@ -4,32 +4,58 @@ Style.destroy_all
 breweries = [
   {
     name: "Bent Paddle",
-    picture: "https://pbs.twimg.com/profile_images/594689468646305792/I0YswTOY.jpg"
+    url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487329033/acqbuqy5f3jd9r7vcth5.png"
     },
   {
     name: "Surly",
-    picture: "https://pbs.twimg.com/profile_images/594689468646305792/I0YswTOY.jpg"
+    url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487341064/kbuui5seeslvrad98ebp.png"
     },
   {
     name: "Castle Danger",
-    picture: "https://pbs.twimg.com/profile_images/594689468646305792/I0YswTOY.jpg"
-    },
-  {
-    name: "Lagunitas",
-    picture: "https://pbs.twimg.com/profile_images/594689468646305792/I0YswTOY.jpg"
-    },
-  {
-    name: "Tin Whiskers",
-    picture: "https://pbs.twimg.com/profile_images/594689468646305792/I0YswTOY.jpg"
-    },
-  {
-    name: "3 Floyds",
-    picture: "https://pbs.twimg.com/profile_images/594689468646305792/I0YswTOY.jpg"
+    url: "http://res.cloudinary.com/ders-cloud/image/upload/v1487326500/castle_danger_logo_ooevh7.png"
     }
 ]
 
-styles = %w(ipa pilsner lager porter saison)
+styles = %w(IPA Pilsner Lager Porter Stout Saison)
 styles.each { |style| Style.create(name: style) }
-
-
 breweries.each { |brewery| Brewery.create(brewery) }
+
+Brewery.all.each  { |brewery| brewery.photo_url = brewery.url }
+
+# url = "http://img.clubic.com/07791435-photo-playstation.jpg"
+# product = Product.new(name: 'Playstation')
+# product.save!
+# product.photo_url = url # Upload happens here
+
+# breweries = [
+#   {
+#     name: "Bent Paddle",
+#     description: "",
+#     location: ""
+#     },
+#   {
+#     name: "Surly",
+#     description: "",
+#     location: ""
+#     },
+#   {
+#     name: "Castle Danger",
+#     description: "",
+#     location: ""
+#     },
+#   {
+#     name: "Lagunitas",
+#     description: "",
+#     location: ""
+#     },
+#   {
+#     name: "Tin Whiskers",
+#     description: "",
+#     location: ""
+#     },
+#   {
+#     name: "Summit",
+#     description: "",
+#     location: ""
+#     }
+# ]

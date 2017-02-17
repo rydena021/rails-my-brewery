@@ -4,11 +4,14 @@
   <%= link_to "Add a brewery", new_brewery_path, class: "btn btn-primary" %>
 </div>
 
+
 <div class="container">
   <div class="row">
     <% @breweries.each do |brewery| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card text-center">
+          <div class="card-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path brewery.photo.path, height: 200, width: 200, crop: :fill %>')">
+          </div>
           <div class="card-body">
             <%= link_to brewery.name, brewery_path(brewery) %>
           </div>
@@ -17,5 +20,4 @@
     <% end %>
   </div>
 </div>
-
 

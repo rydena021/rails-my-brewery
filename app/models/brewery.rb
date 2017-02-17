@@ -3,4 +3,6 @@ class Brewery < ApplicationRecord
 
   has_many :styles, through: :beers
   has_many :beers, dependent: :destroy
+
+  has_attachment :photo
 end

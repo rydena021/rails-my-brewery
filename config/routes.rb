@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   end
 
   resources :styles, only: [:show]
+
+  mount Attachinary::Engine => "/attachinary"
+
   root to: "breweries#index"
 end
