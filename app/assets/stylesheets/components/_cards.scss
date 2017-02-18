@@ -2,16 +2,18 @@
 .card {
   height: 250px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background: $flat-blue;
-  color: white;
+  background-image: url('http://chainimage.com/images/old-paper-background-photo-background-1-jpg.jpg');
+  background-size: cover !important;
+  color: #3C5F2F;
   position: relative;
-  border-radius: 5px;
+  border-radius: 25px;
   margin-bottom: 20px;
+  text-shadow: 2px 2px $sand;
 }
 .card-logo {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 40px;
 }
 .card-location {
   position: absolute;

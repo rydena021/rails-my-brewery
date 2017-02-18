@@ -12,14 +12,14 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 ">
+    <div class="col-xs-12 col-sm-6">
       <ul>
-    <% @brewery.beers.each do |beer| %>
-      <h3><%= beer.name %></h3>
-        <li>Style: <%= link_to beer.style.name, style_path(beer.style) %></li>
-        <li>Description: <%= beer.description %></li>
-        <%= link_to "Delete", brewery_beer_path(@brewery, beer), method: "delete" %>
-    <% end %>
+        <% @brewery.beers.each do |beer| %>
+        <h3><%= beer.name %></h3>
+          <li>Style: <%= link_to beer.style.name, style_path(beer.style) %></li>
+          <li>Description: <%= beer.description %></li>
+          <%= link_to "Delete", brewery_beer_path(@brewery, beer), method: "delete" %>
+        <% end %>
       </ul>
     </div>
   </div>
