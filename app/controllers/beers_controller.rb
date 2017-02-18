@@ -5,9 +5,10 @@ class BeersController < ApplicationController
     @beer = Beer.new(beer_params)
     @beer.brewery = @brewery
     if @beer.save
-      redirect_to brewery_path(@brewery)
+      redirect_to brewery_path(@brewery), :notice => 'Beer Added!'
     else
-      render "breweries/show"
+      @brewery = Brewery.find(params[:brewery_id])
+      redirect_to brewery_path(@brewery), :notice => 'Invalid Entry'
     end
   end
 
