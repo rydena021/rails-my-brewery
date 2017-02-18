@@ -22,14 +22,25 @@
 }
 
 .banner-show h1 {
+  color: white;
   font-size: 60px;
   font-weight: bold;
-  text-shadow: 4px 4px $black;
+  text-shadow: 4px 4px $metal;
 }
+
 
 .banner-show h2 {
   color: $metal;
   font-size: 50px;
   font-weight: bold;
   text-shadow: 4px 4px white;
+}
+
+.banner-show h3 {
+  color: white;
+  text-align: center;
+
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 4px 4px $metal;
 }

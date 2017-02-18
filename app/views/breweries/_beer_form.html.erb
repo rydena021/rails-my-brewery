@@ -1,7 +1,7 @@
 <%= simple_form_for [@brewery, @beer] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
+  <%= f.input :name, placeholder: "name" %>
+  <%= f.input :description, placeholder: "description" %>
   <%= f.input :style_id, collection: Style.all, prompt: "Select Style" %>
-  <hr>
-  <%= f.button :submit, "Add Beer", class: "btn btn-primary"  %>
+  <br>
+  <%= f.button :submit, "Submit", class: "btn btn-success"  %>
 <% end %>
