@@ -1,13 +1,4 @@
 <%= simple_form_for [@brewery, @beer] do |f| %>
-
-
-
-
-
-
-
-
-
   <%= f.input :name, placeholder: "name" %>
   <%= f.input :description, placeholder: "description" %>
   <%= f.input :style_id, collection: Style.all, prompt: "Select Style" %>
